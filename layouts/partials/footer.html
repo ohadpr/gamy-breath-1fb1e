@@ -1,0 +1,16 @@
+<!-- Footer -->
+<footer id="footer">
+
+    <!-- Icons -->
+        <ul class="icons">
+            {{ range $link := .Site.Params.footer.social_links }}
+                <li><a href="{{ $link.link_url }}" class="icon {{ $link.icon }}"><span class="label">{{ $link.title }}</span></a></li>
+            {{ end }}
+        </ul>
+
+    <!-- Menu -->
+        <ul class="menu">
+            <li>&copy; {{ .Site.Title }}</li>
+        </ul>
+
+</footer>

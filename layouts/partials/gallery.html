@@ -1,0 +1,11 @@
+{{ if .gallery }}
+    <!-- Gallery -->
+    <div class="gallery">
+        {{ $cyc := slice "from-left" "from-right" }}
+        {{ range $item_idx, $item := .gallery }}
+            <article class="{{ index $cyc (mod $item_idx 2) }}">
+                <a href="{{ $item.full_image | relURL }}" class="image fit"><img src="{{ $item.thumb_image | relURL }}" title="{{ $item.title }}" alt="" /></a>
+            </article>
+        {{ end }}
+    </div>
+{{ end }}

@@ -1,0 +1,14 @@
+<!-- Intro -->
+<section id="{{ .element_id }}" class="main style1 dark fullscreen">
+    <div class="content">
+        <header>
+            <h2>{{ .display_title }}</h2>
+        </header>
+        <p>{{ replace .content "\n" "<br />" | safeHTML }}</p>
+        {{ if .next_element_id }}
+            <footer>
+                <a href="#{{ .next_element_id }}" class="button style2 down">More</a>
+            </footer>
+        {{ end }}
+    </div>
+</section>
